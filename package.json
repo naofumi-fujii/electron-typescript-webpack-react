@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc src/electron.ts",
-    "start": "electron src/electron.js",
+    "build": "webpack --config ./webpack.config.js",
+    "start": "npm run build && electron ./src/electron.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
